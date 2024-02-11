@@ -9,8 +9,6 @@ import java.util.List;
 
 public class CourseValidation {
 
-//    public static final String COURSE_NOT_EXIST = "Course with given id is not exist";
-
     public static final String COURSE_NAME_VALID = "Course name can't be null or empty";
     public static final String COURSE_HAS_SAME_NAME = "Course list has same name course already";
 
@@ -20,11 +18,6 @@ public class CourseValidation {
 
     public static final String COURSE_HAS_NOT_VALID_NAME = "There is no name you want to get it";
 
-//    public static void isCourseNotExist(List<Course> courseList, int id){
-//        if (!courseList.contains(id)){
-//            throw new CourseExceptions(COURSE_NOT_EXIST, HttpStatus.BAD_REQUEST);
-//        }
-//    }
     public static void isSameNameExist(List<Course> courseList,Course course){
         for (Course c: courseList){
             if (c.getName().equalsIgnoreCase(course.getName())){
@@ -34,11 +27,6 @@ public class CourseValidation {
     }
 
     public static void isNameExist(String name){
-//        for (Course c: courseList){
-//            if (!c.getName().equalsIgnoreCase(name)){
-//                throw new CourseExceptions(COURSE_NAME_VALID,HttpStatus.BAD_REQUEST);
-//            }
-//        }
         if (name == null || name.isEmpty()){
             throw new CourseExceptions(COURSE_NAME_VALID,HttpStatus.BAD_REQUEST);
         }

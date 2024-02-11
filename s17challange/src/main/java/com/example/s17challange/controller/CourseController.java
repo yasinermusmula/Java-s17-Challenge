@@ -74,16 +74,6 @@ public class CourseController {
         CourseValidation.isSameNameExist(courses, course);
         Course course1 = CourseValidation.checkData(courses, course,courseId);
         return new CourseResponse(course1, getTotalGpa(course));
-//        for (Course c: courses){
-//            if (c.getId().equals(courseId)){
-//                c.setId(courseId);
-//                c.setName(course.getName());
-//                c.setGrade(course.getGrade());
-//                c.setCredit(course.getCredit());
-//            }
-//        }
-//        return new CourseResponse(course,getTotalGpa(course));
-//    }
     }
 
     @DeleteMapping("/courses/{id}")
