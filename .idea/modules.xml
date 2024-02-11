@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-s17-Challenge.iml" filepath="$PROJECT_DIR$/.idea/Java-s17-Challenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/s17challange/s17challange.iml" filepath="$PROJECT_DIR$/s17challange/s17challange.iml" />
     </modules>
   </component>
 </project>
