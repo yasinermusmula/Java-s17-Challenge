@@ -33,7 +33,7 @@ public class CourseValidation {
     }
 
     public static void checkCradentialCredit(Integer courseCredit){
-        if (courseCredit<0 || courseCredit > 4){
+        if (courseCredit == null || courseCredit<0 || courseCredit > 4){
             throw new CourseExceptions(COURSE_CREDIT_VALID,HttpStatus.BAD_REQUEST);
         }
     }
@@ -47,6 +47,7 @@ public class CourseValidation {
     }
 
     public static Course isNameExistForGetByName(List<Course> courseList,String courseName){
+        isNameExist(courseName);
         for (Course course : courseList){
            if (course.getName().equalsIgnoreCase(courseName)){
                return course;

@@ -23,9 +23,9 @@ public class GlobalExceptionsHandler {
     @ExceptionHandler(Exception.class)
     public ResponseEntity<CourseErrorResponse> handleAllException(Exception exception){
         CourseErrorResponse courseErrorResponse =
-                new CourseErrorResponse(HttpStatus.BAD_REQUEST.value(),
+                new CourseErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(),
                         exception.getMessage(),
                         LocalDateTime.now());
-        return new ResponseEntity<>(courseErrorResponse, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(courseErrorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

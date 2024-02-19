@@ -70,6 +70,7 @@ public class CourseController {
 
     @PutMapping("/courses/{id}")
     public CourseResponse update(@PathVariable("id") Integer courseId, @RequestBody Course course) {
+        CourseValidation.isIdExist(courses, course);
         CourseValidation.isNameExist(course.getName());
         CourseValidation.isSameNameExist(courses, course);
         Course course1 = CourseValidation.checkData(courses, course,courseId);
